@@ -23,5 +23,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           push: true
           tags: orenleung/jax_tpu:latest
