@@ -11,13 +11,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build -t orenleung/jax_tpu:latest .
     - name: docker login
       env:
         DOCKER_USER: orenleung
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      run: |
-        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-    - name: Build the Docker image
-      run: docker build -t orenleung/jax_tpu:latest .
+      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name:
       run: docker push orenleung/jax_tpu
