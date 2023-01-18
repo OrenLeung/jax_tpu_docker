@@ -15,8 +15,8 @@ jobs:
       run: docker build -t orenleung/jax_tpu:latest .
     - name: docker login
       env:
-        DOCKER_USER: orenleung
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME}}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      run: echo $DOCKER_USERNAME && docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - name:
       run: docker push orenleung/jax_tpu
