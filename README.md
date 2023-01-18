@@ -24,7 +24,7 @@ docker build -t orenleung/jax_tpu .
 ```
 
 ## Anotations
-Since `--privileged` is required and `--net=host` is recommended, this docker image to run will require sudo privileges, so make sure that either `docker` daemon is configured to run without sudo or the user is added to `docker` group or the user is root.
+Since `--privileged` and `--net=host` is required, this docker image to run will require sudo privileges, so make sure that either `docker` daemon is configured to run without sudo or the user is added to `docker` group or the user is root.
 
 ## TroubleShoot
 if you get this error message
