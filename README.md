@@ -2,6 +2,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/OrenLeung/jax_tpu_docker)
 ![GitHub contributors](https://img.shields.io/github/contributors/OrenLeung/jax_tpu_docker)
 ![GitHub last commit](https://img.shields.io/github/last-commit/OrenLeung/jax_tpu_docker)
+![Docker Pulls](https://img.shields.io/docker/pulls/orenleung/jax_tpu)
 
 ## About
 Provides a Docker image for running JAX on TPU VMs. This repository contains the necessary files to build the Docker image and run JAX on TPUs with ease, making it easy for researchers to take advantage of the power of TPUs for their machine learning projects.
