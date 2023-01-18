@@ -1,8 +1,21 @@
-# Jax TPU VM Docker 
+# Jax TPU VM Docker Base Image 🚀
+![GitHub issues](https://img.shields.io/github/issues/OrenLeung/jax_tpu_docker)
+![GitHub contributors](https://img.shields.io/github/contributors/OrenLeung/jax_tpu_docker)
+![GitHub last commit](https://img.shields.io/github/last-commit/OrenLeung/jax_tpu_docker)
+
+## About
+Provides a Docker image for running JAX on TPU VMs. This repository contains the necessary files to build the Docker image and run JAX on TPUs with ease, making it easy for researchers to take advantage of the power of TPUs for their machine learning projects.
+
+This image is intended to be the base image for JAX on TPU VMs, thus you can extend it via `FROM orenleung:jax_tpu` or directly copying and editing the file itself.
 
 ## Run Docker Container
 ```bash
 docker run --net=host --privileged -it --rm orenleung/jax_tpu:latest
+```
+
+## Pull Docker Container
+```bash
+docker pull orenleung/jax_tpu:latest
 ```
 
 ## Build Docker Image
@@ -20,3 +33,7 @@ docker: Got permission denied while trying to connect to the Docker daemon socke
 See 'docker run --help'
 ```
 use `sudo` or add your user into the docker group [Docker Post-Install Instructions](https://docs.docker.com/engine/install/linux-postinstall/)
+
+
+## References
+- [https://github.com/tensorflow/tpu/blob/master/tools/docker/Dockerfile](https://github.com/tensorflow/tpu/blob/master/tools/docker/Dockerfile)
